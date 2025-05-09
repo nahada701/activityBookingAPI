@@ -1,0 +1,142 @@
+{
+    "info": {
+        "_postman_id": "3d922426-e430-4e23-b891-e9d2b96438ca",
+        "name": "Assignment API Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "register",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/register",
+                    "path": [
+                        "register"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\":\"nahada\",\n  \"email\":\"nahadax701@gmail.com\",\n  \"phone\":839746839,\n  \"password\":\"minminmin\"\n}"
+                }
+            }
+        },
+        {
+            "name": "login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/login",
+                    "path": [
+                        "login"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\":\"nahadax701@gmail.com\",\n  \"password\":\"minminmin\"\n}"
+                }
+            }
+        },
+        {
+            "name": "addActivity",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/activity/add",
+                    "path": [
+                        "activity",
+                        "add"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\r\n  \"title\": \"Stand-up Comedy Night\",\r\n  \"description\": \"Laugh out loud with the best comedians in town.\",\r\n  \"location\": \"Downtown Club\",\r\n  \"dateTime\": \"2025-06-22T21:00:00Z\"\r\n}\r\n"
+                }
+            }
+        },
+        {
+            "name": "getallActivities",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/activity/allActivities",
+                    "path": [
+                        "activity",
+                        "allActivities"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "bookActivity",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/activity/book/681e4b324be9d2070f073886",
+                    "path": [
+                        "activity",
+                        "book",
+                        "681e4b324be9d2070f073886"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "*/*",
+                        "disabled": true
+                    },
+                    {
+                        "key": "User-Agent",
+                        "value": "Thunder Client (https://www.thunderclient.com)",
+                        "disabled": true
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFlMDNiMTBjNWY4MzU0N2IwNzVjNDIiLCJpYXQiOjE3NDY4MTY5ODN9.7MTKzexhA9VpLy6jKRiAQjb3cKG-fSBtZaPHPgiGOnc"
+                    }
+                ]
+            }
+        }
+    ]
+}
